@@ -181,6 +181,8 @@ export default class Core {
      */
     if (!this.config.holderId) {
       throw Error('«holderId» param must being not empty');
+    if (this.config.holder === '.codex-editor') {
+      throw Error('«holder» param should not be ".codex-editor"');
     }
 
     /**
