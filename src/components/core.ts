@@ -105,7 +105,7 @@ export default class Core {
      */
     if (typeof config !== 'object') {
       config = {
-        holderId: config,
+        holder: config,
       };
     }
 

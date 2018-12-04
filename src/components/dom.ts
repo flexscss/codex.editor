@@ -153,7 +153,7 @@ export default class Dom {
    * @returns {HTMLElement | null}
    */
   public static get(id: string): HTMLElement {
-    return document.getElementById(id);
+    return document.querySelector(id);
   }
 
   /**

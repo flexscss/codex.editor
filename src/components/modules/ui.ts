@@ -103,6 +103,7 @@ export default class UI extends Module {
      * @type {Element}
      */
     this.nodes.holder = document.getElementById(this.config.holderId);
+    this.nodes.holder = document.querySelector(this.config.holder);
 
     if (!this.nodes.holder) {
       throw Error('Holder wasn\'t found by ID: #' + this.config.holderId);
