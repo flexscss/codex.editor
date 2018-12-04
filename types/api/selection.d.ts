@@ -3,7 +3,7 @@
  */
 export interface Selection {
   /**
-   * Looks ahead from selection and find passed tag with class name
+   * Looks ahead from selection and find passed tag  name
    * @param {string} tagName - tag to find
    * @param {string} className - tag's class name
    * @return {HTMLElement|null}

@@ -100,7 +100,7 @@ export default class Core {
    */
   set configuration(config: EditorConfig|string) {
     /**
-     * Process zero-configuration or with only holderId
+     * Process zero-configuration or with only holder
      * Make config object
      */
     if (typeof config !== 'object') {
@@ -116,10 +116,10 @@ export default class Core {
     this.config = config;
 
     /**
-     * If holderId is empty then set a default value
+     * If holder is empty then set a default value
      */
-    if (!this.config.holderId || typeof this.config.holderId !== 'string') {
-      this.config.holderId = 'codex-editor';
+    if (!this.config.holder || typeof this.config.holder !== 'string') {
+      this.config.holder = '#codex-editor';
     }
 
     /**
@@ -177,10 +177,12 @@ export default class Core {
    */
   public async validate(): Promise<void> {
     /**
-     * Check if holderId is not empty
+     * Check if holder is not empty
      */
-    if (!this.config.holderId) {
-      throw Error('«holderId» param must being not empty');
+    if (!this.config.holder) {
+      throw Error('«holder» param must being not empty');
+    }
+
     if (this.config.holder === '.codex-editor') {
       throw Error('«holder» param should not be ".codex-editor"');
     }
@@ -188,8 +190,8 @@ export default class Core {
     /**
      * Check for a holder element's existence
      */
-    if (!$.get(this.config.holderId)) {
-      throw Error(`element with ID «${this.config.holderId}» is missing. Pass correct holder's ID.`);
+    if (!$.get(this.config.holder)) {
+      throw Error(`element  «${this.config.holder}» is missing. Pass correct holder's class or ID.`);
     }
 
     /**

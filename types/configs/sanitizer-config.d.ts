@@ -21,7 +21,7 @@ export interface SanitizerConfig {
    *   return el.textContent !== '';
    * }
    *
-   * @example For blockquote with class 'indent' save CLASS and STYLE attributes
+   * @example For blockquote  'indent' save CLASS and STYLE attributes
    *          Otherwise strip all attributes
    * blockquote: function(el) {
    *   if (el.classList.contains('indent')) {

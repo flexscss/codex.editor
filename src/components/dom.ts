@@ -29,7 +29,7 @@ export default class Dom {
   }
 
   /**
-   * Helper for making Elements with classname and attributes
+   * Helper for making Elements name and attributes
    *
    * @param  {string} tagName           - new Element tag name
    * @param  {array|string} classNames  - list or name of CSS classname(s)

@@ -288,7 +288,7 @@ export default class SelectionUtils {
           }
 
           /**
-           * If we have found required tag with class then go out from the cycle
+           * If we have found required tag  then go out from the cycle
            */
           if (parentTag) {
             break;
